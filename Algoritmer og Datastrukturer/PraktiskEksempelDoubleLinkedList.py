@@ -7,6 +7,7 @@ class Node:
 class DoubleLinkedList:
 	def __init__ (self):
 		self.head = None
+		self.tail = None
 
 	def addNode (self, data):
 		nyNode = Node(data)
@@ -28,40 +29,41 @@ class DoubleLinkedList:
 			last = last.next
 		last.next = nyNode
 		nyNode.prev = last
+		
+
 		return
-"""
+
 	def display(self):
-		gjeldene = self.head
-
-		if(self.head == None):
-			print("List is empty")
-			return
-		print("Noder i linked list: ")
-		while(gjeldene != None):
-			print(gjeldene.data)
-			gjeldene = gjeldene.next
-
-	def displayReverse(self):
-		gjeldene = self.head
-
+		print("Hei")
 		if self.head == None:
 			print("List is empty")
 			return
-		print("Noder i linked list reversert: ")
-		while gjeldene != None:
-			print(gjeldene.data)
-			gjeldene = gjeldene.next
-"""
+		node = self.head
+		print("Noder i linked list")
+		while node != None:
+			print(node.data)
+			last = node
+			node = node.next
 
-	def display(self):
-		if self.head != None:
+	def displayReverse(self):
+		print("\n")
+		if self.head == None:
 			print("List is empty")
 			return
-		else:
-			n = self.head
-			while n != None:
-				print(n)
-				n = n.next
+		node = self.head
+		#Finn slutten
+		print("Finner slutten..")
+		while node.next != None:
+			print(node.data)
+			node = node.next
+		print("Funnet slutten!")
+		print("Siste element:", node.data)
+		print("\n\n")
+		print("Finner starten..")
+		while node != None:
+			print(node.data)
+			node = node.prev
+		print("Funnet starten!")
 
 minLinkedList = DoubleLinkedList()
 
@@ -76,4 +78,4 @@ while True:
 
 print("Path: ")
 minLinkedList.display()
-#minLinkedList.displayReverse()
+minLinkedList.displayReverse()

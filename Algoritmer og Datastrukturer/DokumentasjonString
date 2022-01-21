@@ -1,0 +1,10 @@
+Oppgaven:
+	Oppgaven var å vise til et praktisk eksempel ved bruk av strings. Jeg bestemte meg for å lage en veldig basic html parser.
+
+Hva jeg vet:
+	Jeg skal kunne oppfatte hvor tekst står i forhold til html tags. Lignende tagger blir brukt i f.eks. xml, så det kan gjenbrukes.
+Hva løsningen bør inneholde:
+	
+Prioritert liste over hva jeg vil ha med:
+
+Utdypning:
